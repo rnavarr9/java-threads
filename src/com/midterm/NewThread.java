@@ -8,7 +8,8 @@ public class NewThread extends Thread {
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
+                    System.out.println("My sleep got interrupted");
             }
             System.out.println("Another Thread " + i + " running");
         }

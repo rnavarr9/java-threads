@@ -14,11 +14,14 @@ package com.midterm;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         NewThread ntObj = new NewThread();
 //        NewThread atObj = new NewThread();
 //        System.out.println("state: " + ntObj.getState());  //state of the thread
         ntObj.start(); // with this, multithreading, both run combined
+        ntObj.interrupt();
+//        ntObj.join(); // the main method will wait for the other thread to complete
+
 //        atObj.start();
 //        System.out.println("state: " + ntObj.getState());  //state of the thread
         ntObj.setPriority(10); //maximum priority
